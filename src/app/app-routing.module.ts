@@ -1,10 +1,18 @@
-import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-const routes: Routes = [];
+import { CreateNewAssetComponent } from './components/create-new-asset/create-new-asset.component';
+import { NgModule } from '@angular/core';
+
+const routes: Routes = [
+  { path: '', redirectTo: 'create-new-asset', pathMatch: 'full' },
+  {
+    path: 'create-new-asset',
+    component: CreateNewAssetComponent,
+  },
+];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  imports: [RouterModule.forRoot(routes, { useHash: true })],
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

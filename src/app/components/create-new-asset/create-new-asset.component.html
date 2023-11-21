@@ -1,0 +1,100 @@
+<div class="m-4">
+  <h1 class="title">New Asset Create</h1>
+
+  <!-- <form (ngSubmit)="optionJenisPengajuan()"> -->
+  <div class="row">
+    <div class="col">
+      <mat-card>
+        <mat-form-field appearance="outline">
+          <mat-label class="text-bold">Jenis Pengajuan</mat-label>
+          <mat-select (selectionChange)="optionJenisPengajuan($event)" required>
+            <mat-option class="text-bold">none</mat-option>
+            <mat-option
+              class="text-bold"
+              *ngFor="let option of listJenisPengajuan"
+              [value]="option.jenisPengajuanValue"
+              >{{ option.jenisPengajuanDesc }}</mat-option
+            >
+          </mat-select>
+          <mat-error>Jenis Pengajuan is required </mat-error>
+        </mat-form-field>
+
+        <!--  BRAND -->
+        <div *ngIf="jenisPengajuanBrand === true">
+          <mat-form-field appearance="outline">
+            <mat-label class="text-bold"> Pengajuan</mat-label>
+            <mat-select required>
+              <mat-option class="text-bold">none</mat-option>
+            </mat-select>
+            <mat-error>Jenis Pengajuan is required </mat-error>
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label class="text-bold"> Pengajuan</mat-label>
+            <mat-select required>
+              <mat-option class="text-bold">none</mat-option>
+            </mat-select>
+            <mat-error>Jenis Pengajuan is required </mat-error>
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label class="text-bold"> Pengajuan</mat-label>
+            <mat-select required>
+              <mat-option class="text-bold">none</mat-option>
+            </mat-select>
+            <mat-error>Jenis Pengajuan is required </mat-error>
+          </mat-form-field>
+          <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Address 2</mat-label>
+            <textarea matInput></textarea>
+          </mat-form-field>
+          <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Address 2</mat-label>
+            <textarea matInput></textarea>
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label class="text-bold"> Pengajuan</mat-label>
+            <mat-select required>
+              <mat-option class="text-bold">none</mat-option>
+            </mat-select>
+            <mat-error>Jenis Pengajuan is required </mat-error>
+          </mat-form-field>
+          <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Address 2</mat-label>
+            <textarea matInput></textarea>
+          </mat-form-field>
+        </div>
+
+        <!-- MADE IN -->
+        <div *ngIf="jenisPengajuanMadeIn === true">
+          <mat-form-field appearance="outline">
+            <mat-label class="text-bold">Jenis Pengajuan</mat-label>
+            <mat-select required>
+              <mat-option class="text-bold">none</mat-option>
+              <mat-option
+                class="text-bold"
+                *ngFor="let option of listJenisPengajuan"
+                [value]="option.jenisPengajuanValue"
+                >{{ option.jenisPengajuanDesc }}</mat-option
+              >
+            </mat-select>
+            <mat-error>Jenis Pengajuan is required </mat-error>
+          </mat-form-field>
+        </div>
+      </mat-card>
+    </div>
+
+    <div class="col">
+      <mat-card>
+        <mat-form-field appearance="outline">
+          <mat-label>ID Negara</mat-label>
+          <input matInput formControlName="idNegara" appearance="outline" />
+          <mat-error> ID Negara tidak boleh kosong </mat-error>
+          <mat-error> Invalid </mat-error>
+        </mat-form-field>
+      </mat-card>
+    </div>
+  </div>
+
+  <button mat-raised-button color="primary" class="me-3 mt-3">Request</button>
+  <button mat-button>Cancel</button>
+  <!-- </form> -->
+</div>
