@@ -13,6 +13,7 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatSortModule } from '@angular/material/sort';
 import { MatTableModule } from '@angular/material/table';
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
 
 const materialComponent = [
   MatButtonModule,
@@ -28,6 +29,7 @@ const materialComponent = [
   MatTableModule,
   MatGridListModule,
   MatSelectModule,
+  ReactiveFormsModule,
 ];
 
 @NgModule({

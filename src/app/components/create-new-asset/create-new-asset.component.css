@@ -5,14 +5,37 @@
   font-weight: 500;
 }
 
-::ng-deep .mat-form-field-wrapper {
-  padding-bottom: 0;
-}
-
 .text-bold {
   font-weight: 500;
 }
 
 mat-form-field {
   width: 100%;
+}
+
+.flexCenter {
+  display: flex;
+  align-items: baseline;
+}
+
+.sizeUpload {
+  width: 100%;
+  height: 70%;
+}
+
+.btn-upload {
+  color: white;
+  font-weight: 500;
+}
+
+table {
+  width: 100%;
+}
+
+.no-bottom-border td {
+  border-bottom: none !important;
+}
+
+.mat-row:nth-child(odd) {
+  background-color: #f2f2f2; /* Warna abu-abu untuk kolom ganjil */
 }

@@ -1,5 +1,6 @@
+import { JenisPengajuan, dataLampiran } from '../models/new-assets';
+
 import { Injectable } from '@angular/core';
-import { JenisPengajuan } from '../models/new-assets';
 
 @Injectable({
   providedIn: 'root',
@@ -39,5 +40,23 @@ export class MainService {
       },
     ];
     return listJenisPengajuan;
+  }
+
+  getDataDummy(): dataLampiran[] {
+    const dummyData: dataLampiran[] = [
+      {
+        deskripsi: 'Item 1',
+        namaLampiran: 'Nama 1',
+      },
+      {
+        deskripsi: 'Item 2',
+        namaLampiran: 'Nama 2',
+      },
+      {
+        deskripsi: 'Item 3',
+        namaLampiran: 'Nama 3',
+      },
+    ];
+    return dummyData;
   }
 }
